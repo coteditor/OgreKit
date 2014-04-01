@@ -1767,7 +1767,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = 4DC40BA3091509DC0029A2A6 /* Build configuration list for PBXProject "OgreKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2354,7 +2354,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = Oniguruma;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.7.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.9.sdk";
 			};
 			name = Debug;
 		};
@@ -2366,7 +2366,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = Oniguruma;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.7.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.9.sdk";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -2377,7 +2377,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = Oniguruma;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.7.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.9.sdk";
 			};
 			name = Default;
 		};
