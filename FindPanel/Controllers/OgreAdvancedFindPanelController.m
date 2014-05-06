@@ -135,15 +135,9 @@ static NSString	*OgreAFPCAttributedReplaceHistoryKey = @"AFPC Attributed Replace
 	
 	[toggleStyleOptionsButton setState:NSOffState];
     
-    // disable Smart Quote/Dash on Mavericks and later
-    if ([findTextView respondsToSelector:@selector(setAutomaticQuoteSubstitutionEnabled:)]) {
-        [findTextView setAutomaticQuoteSubstitutionEnabled:NO];
-        [replaceTextView setAutomaticQuoteSubstitutionEnabled:NO];
-    }
-    if ([findTextView respondsToSelector:@selector(setAutomaticDashSubstitutionEnabled:)]) {
-        [findTextView setAutomaticDashSubstitutionEnabled:NO];
-        [replaceTextView setAutomaticDashSubstitutionEnabled:NO];
-    }
+    // disable Automatic Substitution Features
+    [self disableAutomaticSubstitutions:findTextView];
+    [self disableAutomaticSubstitutions:replaceTextView];
 	
 	// restore history
 	[self restoreHistory:[textFinder history]];
@@ -162,6 +156,19 @@ static NSString	*OgreAFPCAttributedReplaceHistoryKey = @"AFPC Attributed Replace
 		selector: @selector(updateMaxNumOfReplaceHistory:) 
 		name: NSControlTextDidEndEditingNotification
 		object: maxNumOfReplaceHistoryTextField];
+}
+
+
+// disable Automatic Substitution Features
+- (void)disableAutomaticSubstitutions:(NSTextView*)textView
+{
+    [textView setSmartInsertDeleteEnabled:NO];
+    [textView setAutomaticDashSubstitutionEnabled:NO];
+    [textView setAutomaticDataDetectionEnabled:NO];
+    [textView setAutomaticLinkDetectionEnabled:NO];
+    [textView setAutomaticQuoteSubstitutionEnabled:NO];
+    [textView setAutomaticSpellingCorrectionEnabled:NO];
+    [textView setAutomaticTextReplacementEnabled:NO];
 }
 
 /*- (void)notified:(NSNotification*)aNotification
