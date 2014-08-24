@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
                       xcodebuild -target All
                       mv build/Default/OgreKit.framework .
                       CMD
-  s.public_header_files = "RegularExpression/*.h", "RegularExpression/oniguruma/**/*.h", "FindPanel/**/*.h"
   s.vendored_frameworks = 'OgreKit.framework'
   s.resources       = 'OgreKit.framework'
   s.requires_arc    = false
