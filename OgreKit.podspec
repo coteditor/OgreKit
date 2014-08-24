@@ -15,16 +15,10 @@ Pod::Spec.new do |s|
                      :tag => s.version.to_s }
 
   s.prepare_command = <<-CMD
-                      cd RegularExpression/oniguruma/
-                      make
+                      xcodebuild -target All
+                      mv build/Default/OgreKit.framework .
                       CMD
-  s.source_files    = "RegularExpression/*.{h,m}", "RegularExpression/oniguruma/**/*.{h,m}", "FindPanel/**/*.{h,m}"
-  s.resources       = "FindPanel/Resources/*", "RegularExpression/oniguruma/universal/*"
-  s.libraries       = 'onig'
-  s.private_header_files = "RegularExpression/oniguruma/*"
-  s.xcconfig        = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/OgreKit"',
-                        'HEADER_SEARCH_PATHS' => '$(SRCROOT)/RegularExpression/oniguruma/universal',
-                        'OTHER_LINKER_FLAGS' => '-seg1addr 0x32000000',
-                        'OTHER_WARNING_FLAGS' => '-Wmost -Wno-four-char-constants -Wno-unknown-pragmas' }
+  s.public_header_files = "RegularExpression/*.h", "RegularExpression/oniguruma/**/*.h", "FindPanel/**/*.h"
+  s.vendored_frameworks = 'OgreKit.framework'
   s.requires_arc    = false
 end
