@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
                       cd RegularExpression/oniguruma/
                       make
                       CMD
-  s.source_files    = "RegularExpression/**/*.{h,m}", "FindPanel/**/*.{h,m}"
+  s.source_files    = "RegularExpression/*.{h,m}", "RegularExpression/oniguruma/**/*.{h,m}", "FindPanel/**/*.{h,m}"
   s.resources       = "FindPanel/Resources/*", "RegularExpression/oniguruma/universal/*"
   s.libraries       = 'onig'
   s.private_header_files = "RegularExpression/oniguruma/*"
