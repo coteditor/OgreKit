@@ -574,7 +574,10 @@ static NSString	*OgreAFPCAttributedReplaceHistoryKey = @"AFPC Attributed Replace
 
 - (void)addFindHistory:(NSAttributedString*)attrString
 {
-	[self loadFindStringToPasteboard];	// load to Paseteboad
+    // Mod for CotEditor (2014-10-03 by 1024jp)
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"syncFindPboard"]) {
+        [self loadFindStringToPasteboard];	// load to Paseteboad
+    }
 	
 	NSMenu		*menu = [findPopUpButton menu];
 	int			i, n = [_findHistory count];
@@ -902,7 +905,12 @@ static NSString	*OgreAFPCAttributedReplaceHistoryKey = @"AFPC Attributed Replace
 
 - (IBAction)showFindPanel:(id)sender
 {
-    //if (![findPanel isVisible]) [self loadFindStringFromPasteboard];
+    // Mod for CotEditor (2014-10-03 by 1024jp)
+    if (![findPanel isVisible] &&
+        [[NSUserDefaults standardUserDefaults] boolForKey:@"syncFindPboard"])
+    {
+        [self loadFindStringFromPasteboard];
+    }
     
 	if (![textFinder useStylesInFindPanel]) {
 		if ([toggleStyleOptionsButton state] != NSOffState) {
