@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "OgreKit"
-  s.version      = "2.1.7.1"
+  s.version      = "2.1.7.2"
   s.summary      = "Forked OgreKit framework for CotEditor."
 
   s.homepage     = "https://github.com/coteditor/OgreKit"
