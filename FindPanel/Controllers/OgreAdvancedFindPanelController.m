@@ -575,7 +575,7 @@ static NSString	*OgreAFPCAttributedReplaceHistoryKey = @"AFPC Attributed Replace
 - (void)addFindHistory:(NSAttributedString*)attrString
 {
     // Mod for CotEditor (2014-10-03 by 1024jp)
-    if [[NSUserDefaults standardUserDefaults] boolForKey:@"syncFindPboard"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"syncFindPboard"]) {
         [self loadFindStringToPasteboard];	// load to Paseteboad
     }
 	
