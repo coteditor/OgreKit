@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
@@ -745,7 +745,7 @@
                                     <binding destination="912" name="value" keyPath="selection.findLongestOption" id="1000"/>
                                 </connections>
                             </button>
-                            <button toolTip="'^' -> '\A', '$' -> '\z', '\Z' -> '\z'" id="829">
+                            <button toolTip="'^' -&gt; '\A', '$' -&gt; '\z', '\Z' -&gt; '\z'" id="829">
                                 <rect key="frame" x="8" y="233" width="80" height="18"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="单行" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="830">
@@ -870,27 +870,27 @@
         </customView>
         <menu title="Menu" id="889">
             <items>
-                <menuItem title="Find…" keyEquivalent="f" id="893">
+                <menuItem title="查找…" keyEquivalent="f" id="893">
                     <connections>
                         <action selector="showFindPanel:" target="-2" id="953"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Find Next" tag="1" keyEquivalent="g" id="890">
+                <menuItem title="查找下一个" tag="1" keyEquivalent="g" id="890">
                     <connections>
                         <action selector="findNext:" target="911" id="950"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Find Previous" tag="2" keyEquivalent="G" id="892">
+                <menuItem title="查找上一个" tag="2" keyEquivalent="G" id="892">
                     <connections>
                         <action selector="findPrevious:" target="911" id="952"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Find Selected Text" tag="3" id="904">
+                <menuItem title="在选择文本中查找" tag="3" id="904">
                     <connections>
                         <action selector="findSelectedText:" target="911" id="961"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Find All" tag="4" keyEquivalent="F" id="899">
+                <menuItem title="查找全部" tag="4" keyEquivalent="F" id="899">
                     <connections>
                         <action selector="findAll:" target="911" id="958"/>
                     </connections>
@@ -898,17 +898,17 @@
                 <menuItem isSeparatorItem="YES" id="903">
                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                 </menuItem>
-                <menuItem title="Use Selection for Find" tag="5" keyEquivalent="e" id="894">
+                <menuItem title="使用选择查找" tag="5" keyEquivalent="e" id="894">
                     <connections>
                         <action selector="useSelectionForFind:" target="911" id="954"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Use Selection for Replace" tag="5" keyEquivalent="E" id="907">
+                <menuItem title="使用选择替换" tag="5" keyEquivalent="E" id="907">
                     <connections>
                         <action selector="useSelectionForReplace:" target="911" id="965"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Jump to Selection" tag="6" keyEquivalent="j" id="891">
+                <menuItem title="跳转到选择" tag="6" keyEquivalent="j" id="891">
                     <connections>
                         <action selector="jumpToSelection:" target="911" id="951"/>
                     </connections>
@@ -916,18 +916,18 @@
                 <menuItem isSeparatorItem="YES" id="895">
                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                 </menuItem>
-                <menuItem title="Replace" tag="7" id="896">
+                <menuItem title="替换" tag="7" id="896">
                     <connections>
                         <action selector="replace:" target="911" id="955"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Replace and Find Next" tag="8" keyEquivalent="g" id="897">
+                <menuItem title="替换并查找下一个" tag="8" keyEquivalent="g" id="897">
                     <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                     <connections>
                         <action selector="replaceAndFind:" target="911" id="956"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Replace All" tag="9" id="898">
+                <menuItem title="替换全部" tag="9" id="898">
                     <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                     <connections>
                         <action selector="replaceAll:" target="911" id="957"/>
@@ -936,12 +936,12 @@
                 <menuItem isSeparatorItem="YES" id="900">
                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                 </menuItem>
-                <menuItem title="Highlight" tag="10" keyEquivalent="H" id="901">
+                <menuItem title="高亮" tag="10" keyEquivalent="H" id="901">
                     <connections>
                         <action selector="highlight:" target="911" id="959"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Unhighlight" tag="11" keyEquivalent="H" id="902">
+                <menuItem title="取消高亮" tag="11" keyEquivalent="H" id="902">
                     <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                     <connections>
                         <action selector="unhighlight:" target="911" id="960"/>
@@ -950,12 +950,12 @@
                 <menuItem isSeparatorItem="YES" id="908">
                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                 </menuItem>
-                <menuItem title="Clear Find String Styles" id="909">
+                <menuItem title="清除查找字符串样式" id="909">
                     <connections>
                         <action selector="clearFindStringStyles:" target="911" id="968"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Clear Replace String Styles" id="910">
+                <menuItem title="清除替换字符串样式" id="910">
                     <connections>
                         <action selector="clearReplaceStringStyles:" target="911" id="969"/>
                     </connections>
@@ -963,7 +963,7 @@
                 <menuItem isSeparatorItem="YES" id="905">
                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                 </menuItem>
-                <menuItem title="Clear Find/Replace Histories…" id="906">
+                <menuItem title="清除查找/替换历史…" id="906">
                     <connections>
                         <action selector="clearFindReplaceHistories:" target="911" id="962"/>
                     </connections>
