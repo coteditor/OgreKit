@@ -13,7 +13,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MyMenuController : NSObject
+@interface MyMenuController : NSObject <NSFileManagerDelegate>
 {
 }
 - (IBAction)selectCr:(id)sender;

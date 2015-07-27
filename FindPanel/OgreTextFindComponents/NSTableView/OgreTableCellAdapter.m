@@ -147,7 +147,7 @@
 
 - (OgreFindResultLeaf*)findResultLeafWithThread:(OgreTextFindThread*)aThread
 {
-    return [[[OgreTableCellFindResult alloc] initWithTableColumn:_tableColumn row:_rowIndex] autorelease]; 
+    return (OgreFindResultLeaf *)[[[OgreTableCellFindResult alloc] initWithTableColumn:_tableColumn row:_rowIndex] autorelease];
 }
 
 - (BOOL)isSelected
