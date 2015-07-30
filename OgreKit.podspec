@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
 
   s.platform     = :osx, '10.6'
   s.source       = { :git => "https://github.com/coteditor/OgreKit.git",
-                     :branch => "cocoaPods",
-                     :tag => s.version.to_s }
+                     :branch => "coteditor-mod",
+                     :tag => s.version }
 
   s.prepare_command = <<-CMD
                       xcodebuild -target All
