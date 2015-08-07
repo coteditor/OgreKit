@@ -184,9 +184,15 @@
 
 - (void)highlightCharactersInRange:(NSRange)aRange color:(NSColor*)highlightColor
 {
-    [[_textView layoutManager] 
-        setTemporaryAttributes:[NSDictionary dictionaryWithObject:highlightColor forKey:NSBackgroundColorAttributeName] 
-        forCharacterRange:aRange];
+// Arranged by nakamuxu(http://www.aynimac.com/) for CotEditor.
+// setTemporaryAttributes:forCharacterRange: を addTemporaryAttributes:forCharacterRange: に変更し、カラーリングへの影響を排除した。
+// 2008.04.20.
+    [[_textView layoutManager]
+     addTemporaryAttributes:[NSDictionary dictionaryWithObject:highlightColor forKey:NSBackgroundColorAttributeName]
+     forCharacterRange:aRange];
+//    [[_textView layoutManager]
+//        setTemporaryAttributes:[NSDictionary dictionaryWithObject:highlightColor forKey:NSBackgroundColorAttributeName]
+//        forCharacterRange:aRange];
 }
 
 - (id)name { return [_textView className]; }
