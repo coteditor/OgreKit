@@ -57,7 +57,10 @@
 }
 
 /* Undo/Redo Replace */
-- (void)undoTextView:(id)aTarget jumpToSelection:(BOOL)jumpToSelection invocationTarget:(id)myself
+// Arranged by nakamuxu(http://www.aynimac.com/) for CotEditor.
+// Undo登録メソッドをReplaceAll対応のものに入れ替え
+// 2008.04.18.
+- (void)undoTextView:(id)aTarget jumpToSelection:(BOOL)jumpToSelection invocationTarget:(id)myself replaceAll:(BOOL)inBoolReplaceAll
 {
 	NSTextStorage       *textStorage = [aTarget textStorage];
     NSRange             aRange, newRange;
@@ -88,12 +91,15 @@
             pool = [[NSAutoreleasePool alloc] init];
         }
     }
+    if (!inBoolReplaceAll) {
+        [aTarget didChangeText];
+    }
     
     // redo　registeration
-    [[[aTarget undoManager] prepareWithInvocationTarget:redoArray] 
-        undoTextView:aTarget jumpToSelection:jumpToSelection
-        invocationTarget:redoArray];
-        
+    [[[aTarget undoManager] prepareWithInvocationTarget:redoArray]
+     undoTextView:aTarget jumpToSelection:jumpToSelection
+     invocationTarget:redoArray replaceAll:inBoolReplaceAll];
+    
     [redoArray release];
     [pool release];
     

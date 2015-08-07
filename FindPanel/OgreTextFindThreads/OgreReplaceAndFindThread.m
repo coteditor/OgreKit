@@ -57,7 +57,11 @@
         [aLeaf replaceCharactersInRange:matchRange withOGString:replacedString];
         
         [aLeaf endEditing];
-        [aLeaf endRegisteringUndo];
+        // Arranged by nakamuxu(http://www.aynimac.com/) for CotEditor.
+        // Undo登録メソッドをReplaceAll対応のものに入れ替え
+        // 2008.04.18.
+        [aLeaf endRegisteringUndoReplaceAll:NO];
+        //        [aLeaf endRegisteringUndo];
         [aLeaf setSelectedRange:NSMakeRange(matchRange.location, [replacedString length])];
         [aLeaf jumpToSelection];
         

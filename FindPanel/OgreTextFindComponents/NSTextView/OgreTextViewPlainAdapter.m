@@ -150,10 +150,25 @@
         _undoer = [[OgreTextViewUndoer alloc] initWithCapacity:aCapacity];
     }
 }
-
+// Arranged by nakamuxu(http://www.aynimac.com/) for CotEditor.
+// Undo登録メソッドをReplaceAll対応のものに入れ替え
+// 2008.04.18.
+- (void)endRegisteringUndoReplaceAll:(BOOL)inBoolReplaceAll
+{
+    if (_allowsUndo) {
+        // registeration undo
+        [[_undoManager prepareWithInvocationTarget:[_undoer autorelease]]
+         undoTextView:_textView jumpToSelection:NO invocationTarget:_undoer replaceAll:inBoolReplaceAll];
+        _undoer = nil;
+        // Undo操作の登録完了
+        [_undoManager setActionName:OgreTextFinderLocalizedString(@"Replace All")];
+        [_undoManager endUndoGrouping];
+    }
+}
+/*
 - (void)endRegisteringUndo
 {
-     if (_allowsUndo) {
+    if (_allowsUndo) {
         // registeration undo
         [[_undoManager prepareWithInvocationTarget:[_undoer autorelease]] undoTextView:_textView jumpToSelection:NO invocationTarget:_undoer];
         _undoer = nil;
@@ -162,6 +177,7 @@
         [_undoManager endUndoGrouping];
     }
 }
+*/
 
 - (void)endEditing
 {

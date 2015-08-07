@@ -31,6 +31,7 @@
 - (void)endEditing;         // end editing
 - (void)beginRegisteringUndoWithCapacity:(unsigned)aCapacity;  // begin resistering undo oprations
 - (void)endRegisteringUndo;  // end resistering undo oprations
+- (void)endRegisteringUndoReplaceAll:(BOOL)inBoolReplaceAll;  // added for CotEditor undo (2015-08 by 1024jp)
 
 - (BOOL)isSelected;
 - (NSRange)selectedRange;

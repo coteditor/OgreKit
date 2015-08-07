@@ -97,7 +97,10 @@
 #endif
     if (aNumberOfMatches != 0) {
         [aLeaf endEditing];
-        [aLeaf endRegisteringUndo];
+        // Arranged by nakamuxu(http://www.aynimac.com/) for CotEditor.
+        // Undo登録メソッドをReplaceAll対応のものに入れ替え
+        // 2008.04.18.
+        [aLeaf endRegisteringUndoReplaceAll:YES];
         [matchArray release];
     }
 }

@@ -125,6 +125,10 @@
 - (void)endEditing { /* do nothing */ }
 - (void)beginRegisteringUndoWithCapacity:(unsigned)aCapacity { /* do nothing */ }
 - (void)endRegisteringUndo { /* do nothing */ }
+// Arranged by nakamuxu(http://www.aynimac.com/) for CotEditor.
+// Undo登録メソッドをReplaceAll対応のものに入れ替え
+// 2008.04.18.
+- (void)endRegisteringUndoReplaceAll:(BOOL)inBoolReplaceAll { /* do nothing */ }
 
 - (BOOL)isSelected
 {

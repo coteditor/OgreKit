@@ -22,7 +22,11 @@
 }
 - (id)initWithCapacity:(unsigned)aCapacity;
 - (void)addRange:(NSRange)aRange attributedString:(NSAttributedString*)anAttributedString;
-- (void)undoTextView:(id)aTarget jumpToSelection:(BOOL)jumpToSelection invocationTarget:(id)myself;
+// Arranged by 1024jp for CotEditor.
+// Undo登録メソッドをReplaceAll対応のものに入れ替え
+// 2015.08.08.
+- (void)undoTextView:(id)aTarget jumpToSelection:(BOOL)jumpToSelection invocationTarget:(id)myself replaceAll:(BOOL)inBoolReplaceAll;
+//- (void)undoTextView:(id)aTarget jumpToSelection:(BOOL)jumpToSelection invocationTarget:(id)myself;
 @end
 
 /* [MEMO]
