@@ -28,7 +28,7 @@
 "%d strings found."         = "%d Zeichenketten gefunden.";
 // Replace All
 "%d string replaced."		= "%d Zeichenkette ersetzt.";
-"%d strings replaced."      = "%d Zeichenketten gefunden.";
+"%d strings replaced."      = "%d Zeichenketten ersetzt.";
 // Highlight
 "%d string highlighted."    = "%d Zeichenkette markiert.";
 "%d strings highlighted."   = "%d Zeichenketten markiert.";
