@@ -1,4 +1,4 @@
-ONIGURUMA_VERSION=Onigmo-Onigmo-5.13.5
+ONIGURUMA_VERSION=Onigmo-Onigmo-5.15.0
 OS_VERSION=$(shell uname -r)
 
 UNIVERSAL_DIR=universal
