@@ -1771,7 +1771,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0720;
 			};
 			buildConfigurationList = 4DC40BA3091509DC0029A2A6 /* Build configuration list for PBXProject "OgreKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2413,6 +2413,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GCTest;
 				SDKROOT = macosx;
 			};
@@ -2437,6 +2438,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GCTest;
 				SDKROOT = macosx;
 				ZERO_LINK = NO;
@@ -2460,6 +2462,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GCTest;
 				SDKROOT = macosx;
 			};
@@ -2494,6 +2497,7 @@
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2534,6 +2538,7 @@
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2573,6 +2578,7 @@
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2588,6 +2594,7 @@
 		4DC40BA4091509DC0029A2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -2639,6 +2646,7 @@
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2679,6 +2687,7 @@
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2718,6 +2727,7 @@
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
