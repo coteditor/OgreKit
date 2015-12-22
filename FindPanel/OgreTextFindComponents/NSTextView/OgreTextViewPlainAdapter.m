@@ -168,7 +168,11 @@
          undoTextView:_textView jumpToSelection:NO invocationTarget:_undoer replaceAll:inBoolReplaceAll];
         _undoer = nil;
         // Undo操作の登録完了
-        [_undoManager setActionName:OgreTextFinderLocalizedString(@"Replace All")];
+        if (inBoolReplaceAll) {
+            [_undoManager setActionName:OgreTextFinderLocalizedString(@"Replace All")];
+        } else {
+            [_undoManager setActionName:OgreTextFinderLocalizedString(@"Replace")];
+        }
         [_undoManager endUndoGrouping];
     }
 }
