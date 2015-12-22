@@ -121,7 +121,14 @@
     }
     
     // 置換
-	[_textStorage replaceCharactersInRange:aRange withString:[aString string]];
+    // Arranged by 1024jp for CotEditor.
+    // ちゃんとした手続きで NSTextView の文字を入れ替えるよう変更
+    // 2015-12-23
+    if ([_textView shouldChangeTextInRange:aRange replacementString:[aString string]]) {
+        [_textStorage replaceCharactersInRange:aRange withString:[aString string]];
+        [_textView didChangeText];
+    }
+//	[_textStorage replaceCharactersInRange:aRange withString:[aString string]];
 }
 
 - (id)target
