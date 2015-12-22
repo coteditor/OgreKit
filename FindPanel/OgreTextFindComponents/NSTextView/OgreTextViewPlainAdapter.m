@@ -154,7 +154,9 @@
     if (_allowsUndo) {
         _undoManager = [_textView undoManager];
         [_undoManager beginUndoGrouping];
-        _undoer = [[OgreTextViewUndoer alloc] initWithCapacity:aCapacity];
+        // Arranged by 1024jp for CotEditor. 2015-12-23
+        // OgreKit 独自の Undo 登録を無効に
+//        _undoer = [[OgreTextViewUndoer alloc] initWithCapacity:aCapacity];
     }
 }
 // Arranged by nakamuxu(http://www.aynimac.com/) for CotEditor.
@@ -163,9 +165,11 @@
 - (void)endRegisteringUndoReplaceAll:(BOOL)inBoolReplaceAll
 {
     if (_allowsUndo) {
+        // Arranged by 1024jp for CotEditor. 2015-12-23
+        // OgreKit 独自の Undo 登録を無効に
         // registeration undo
-        [[_undoManager prepareWithInvocationTarget:[_undoer autorelease]]
-         undoTextView:_textView jumpToSelection:NO invocationTarget:_undoer replaceAll:inBoolReplaceAll];
+//        [[_undoManager prepareWithInvocationTarget:[_undoer autorelease]]
+//         undoTextView:_textView jumpToSelection:NO invocationTarget:_undoer replaceAll:inBoolReplaceAll];
         _undoer = nil;
         // Undo操作の登録完了
         if (inBoolReplaceAll) {
