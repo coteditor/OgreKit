@@ -61,6 +61,7 @@ static NSString	*OgreAFPCAttributedReplaceHistoryKey = @"AFPC Attributed Replace
 	if (index == 6) return OgreJavaSyntax;
 	if (index == 7) return OgrePerlSyntax;
 	if (index == 8) return OgreRubySyntax;
+    if (index == 9) return OgrePythonSyntax;
 	
 	[NSException raise:OgreException format:@"unknown syntax."];
 	return 0;
@@ -77,6 +78,7 @@ static NSString	*OgreAFPCAttributedReplaceHistoryKey = @"AFPC Attributed Replace
 	if (syntax == OgreJavaSyntax) return 6;
 	if (syntax == OgrePerlSyntax) return 7;
 	if (syntax == OgreRubySyntax) return 8;
+    if (syntax == OgrePythonSyntax) return 9;
 	
 	[NSException raise:OgreException format:@"unknown syntax."];
 	return -1;	// dummy

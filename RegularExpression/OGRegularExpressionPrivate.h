@@ -34,6 +34,7 @@ OnigSyntaxType  OgrePrivateGNURegexSyntax;
 OnigSyntaxType  OgrePrivateJavaSyntax;
 OnigSyntaxType  OgrePrivatePerlSyntax;
 OnigSyntaxType  OgrePrivateRubySyntax;
+OnigSyntaxType  OgrePrivatePythonSyntax;
 
 
 @interface OGRegularExpression (Private)

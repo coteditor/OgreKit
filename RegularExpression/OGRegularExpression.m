@@ -121,6 +121,7 @@ static int namedGroupCallback(const unsigned char *name, const unsigned char *na
 	onig_copy_syntax(&OgrePrivateJavaSyntax, ONIG_SYNTAX_JAVA);
 	onig_copy_syntax(&OgrePrivatePerlSyntax, ONIG_SYNTAX_PERL);
 	onig_copy_syntax(&OgrePrivateRubySyntax, ONIG_SYNTAX_RUBY);
+    onig_copy_syntax(&OgrePrivatePythonSyntax, ONIG_SYNTAX_PYTHON);
 	// enable capture hostory
 	OgrePrivatePOSIXBasicSyntax.op2		|= ONIG_SYN_OP2_ATMARK_CAPTURE_HISTORY; 
 	OgrePrivatePOSIXExtendedSyntax.op2  |= ONIG_SYN_OP2_ATMARK_CAPTURE_HISTORY; 
@@ -130,6 +131,7 @@ static int namedGroupCallback(const unsigned char *name, const unsigned char *na
 	OgrePrivateJavaSyntax.op2			|= ONIG_SYN_OP2_ATMARK_CAPTURE_HISTORY; 
 	OgrePrivatePerlSyntax.op2			|= ONIG_SYN_OP2_ATMARK_CAPTURE_HISTORY; 
 	OgrePrivateRubySyntax.op2			|= ONIG_SYN_OP2_ATMARK_CAPTURE_HISTORY; 
+    OgrePrivatePythonSyntax.op2			|= ONIG_SYN_OP2_ATMARK_CAPTURE_HISTORY;
 }
 
 + (id)regularExpressionWithString:(NSString*)expressionString
@@ -1627,6 +1629,7 @@ static int namedGroupCallback(const unsigned char *name, const unsigned char *na
 	if(syntax == OgreJavaSyntax) return 6;
 	if(syntax == OgrePerlSyntax) return 7;
 	if(syntax == OgreRubySyntax) return 8;
+    if(syntax == OgrePythonSyntax) return 9;
 	
 	[NSException raise:OgreException format:@"unknown syntax."];
 	return -1;	// dummy
@@ -1643,6 +1646,7 @@ static int namedGroupCallback(const unsigned char *name, const unsigned char *na
 	if(intValue == 6) return OgreJavaSyntax;
 	if(intValue == 7) return OgrePerlSyntax;
 	if(intValue == 8) return OgreRubySyntax;
+    if(intValue == 9) return OgrePythonSyntax;
 	
 	[NSException raise:OgreException format:@"unknown syntax."];
 	return 0;	// dummy
@@ -1660,6 +1664,7 @@ static int namedGroupCallback(const unsigned char *name, const unsigned char *na
 	if(syntax == OgreJavaSyntax) return @"Java";
 	if(syntax == OgrePerlSyntax) return @"Perl";
 	if(syntax == OgreRubySyntax) return @"Ruby";
+    if(syntax == OgrePythonSyntax) return @"Python";
 	
 	return @"Unknown";
 }

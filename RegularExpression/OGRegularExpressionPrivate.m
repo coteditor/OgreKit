@@ -82,8 +82,9 @@
 	if(syntax == OgreGrepSyntax)			return &OgrePrivateGrepSyntax;
 	if(syntax == OgreGNURegexSyntax)		return &OgrePrivateGNURegexSyntax;
 	if(syntax == OgreJavaSyntax)			return &OgrePrivateJavaSyntax;
-	if(syntax == OgrePerlSyntax)			return &OgrePrivatePerlSyntax;
-	if(syntax == OgreRubySyntax)			return &OgrePrivateRubySyntax;
+    if(syntax == OgrePerlSyntax)			return &OgrePrivatePerlSyntax;
+    if(syntax == OgreRubySyntax)			return &OgrePrivateRubySyntax;
+    if(syntax == OgrePythonSyntax)			return &OgrePrivatePythonSyntax;
 	
 	[NSException raise:OgreException format:@"unknown syntax."];
 	return NULL;	// dummy
