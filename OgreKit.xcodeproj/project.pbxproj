@@ -2352,7 +2352,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = Oniguruma;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.9.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.11.sdk";
 			};
 			name = Debug;
 		};
@@ -2364,7 +2364,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = Oniguruma;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.9.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.11.sdk";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -2375,7 +2375,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = Oniguruma;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.9.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.11.sdk";
 			};
 			name = Default;
 		};
