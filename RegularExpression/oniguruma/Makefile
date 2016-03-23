@@ -1,5 +1,6 @@
 ONIGURUMA_VERSION=Onigmo-Onigmo-5.15.0
 OS_VERSION=$(shell uname -r)
+DEPLOYMENT_TARGET=10.8
 
 UNIVERSAL_DIR=universal
 INTEL_64_DIR=x86_64
@@ -12,10 +13,10 @@ INTEL_CONFIGURE_FLAGS=--disable-dependency-tracking --host=i686-apple-darwin$(OS
 INTEL_CONFIGURE_FLAGS=--disable-dependency-tracking --host=i686-apple-darwin$(OS_VERSION) --build=i686-apple-darwin$(OS_VERSION) --enable-crnl-as-line-terminator
 
 INTEL_64_SDK=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-INTEL_64_CC=/usr/bin/gcc -arch x86_64
+INTEL_64_CC=/usr/bin/gcc -arch x86_64 -mmacosx-version-min=$(DEPLOYMENT_TARGET)
 
 INTEL_SDK=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-INTEL_CC=/usr/bin/gcc -arch i686
+INTEL_CC=/usr/bin/gcc -arch i686 -mmacosx-version-min=$(DEPLOYMENT_TARGET)
 
 ONIG_TARGET=libonig.la
 LIBS_DIR=.libs
