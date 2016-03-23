@@ -270,10 +270,10 @@
 		4DC41272091518EC0029A2A6 /* OgreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; };
 		4DC41273091518F10029A2A6 /* OgreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; };
 		4DC41274091518F60029A2A6 /* OgreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; };
-		4DC4127C0915191C0029A2A6 /* OgreKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; };
-		4DC412AB0915192A0029A2A6 /* OgreKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; };
-		4DC412AE0915193C0029A2A6 /* OgreKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; };
-		4DC412B10915194C0029A2A6 /* OgreKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; };
+		4DC4127C0915191C0029A2A6 /* OgreKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4DC412AB0915192A0029A2A6 /* OgreKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4DC412AE0915193C0029A2A6 /* OgreKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4DC412B10915194C0029A2A6 /* OgreKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DC40BFC09150BDB0029A2A6 /* OgreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4DC4134309151C2E0029A2A6 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4133F09151C2D0029A2A6 /* MainMenu.nib */; };
 		4DC4134409151C2E0029A2A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4134109151C2E0029A2A6 /* InfoPlist.strings */; };
 		4DC4135609151CA60029A2A6 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4135009151CA60029A2A6 /* MainMenu.nib */; };
@@ -1765,7 +1765,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 4DC40BA3091509DC0029A2A6 /* Build configuration list for PBXProject "OgreKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2383,7 +2383,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2393,13 +2392,13 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "GCTest/GC Test-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GCTest;
 				SDKROOT = macosx;
 			};
@@ -2409,7 +2408,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2418,13 +2416,13 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "GCTest/GC Test-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GCTest;
 				SDKROOT = macosx;
 				ZERO_LINK = NO;
@@ -2435,20 +2433,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "GCTest/GC Test-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GCTest;
 				SDKROOT = macosx;
 			};
@@ -2457,7 +2454,6 @@
 		4DC40BA0091509DC0029A2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2479,11 +2475,11 @@
 				);
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2500,7 +2496,6 @@
 		4DC40BA1091509DC0029A2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2520,11 +2515,11 @@
 				);
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2541,7 +2536,6 @@
 		4DC40BA2091509DC0029A2A6 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2560,11 +2554,11 @@
 				);
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2580,7 +2574,7 @@
 		4DC40BA4091509DC0029A2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ENABLE_TESTABILITY = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -2590,7 +2584,6 @@
 		4DC40BA5091509DC0029A2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
@@ -2599,7 +2592,6 @@
 		4DC40BA6091509DC0029A2A6 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
@@ -2608,7 +2600,6 @@
 		4DC40BF909150BDB0029A2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2630,11 +2621,11 @@
 				);
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2651,7 +2642,6 @@
 		4DC40BFA09150BDB0029A2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2671,11 +2661,11 @@
 				);
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2692,7 +2682,6 @@
 		4DC40BFB09150BDB0029A2A6 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2711,11 +2700,11 @@
 				);
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0x32000000,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = isao.sonobe.OgreKit;
 				PRODUCT_NAME = OgreKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2731,7 +2720,6 @@
 		4DC40C0809150C290029A2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -2741,7 +2729,6 @@
 				GCC_PREFIX_HEADER = RegularExpressionTest/OgreTest_Prefix.h;
 				INFOPLIST_FILE = "RegularExpressionTest/OgreTest-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2764,7 +2751,6 @@
 		4DC40C0909150C290029A2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -2774,7 +2760,6 @@
 				GCC_PREFIX_HEADER = RegularExpressionTest/OgreTest_Prefix.h;
 				INFOPLIST_FILE = "RegularExpressionTest/OgreTest-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2797,7 +2782,6 @@
 		4DC40C0A09150C290029A2A6 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2806,7 +2790,6 @@
 				GCC_PREFIX_HEADER = RegularExpressionTest/OgreTest_Prefix.h;
 				INFOPLIST_FILE = "RegularExpressionTest/OgreTest-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2829,7 +2812,6 @@
 		4DC40C1309150C400029A2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -2839,7 +2821,6 @@
 				GCC_PREFIX_HEADER = FindPanelTest/OgreFindPanelTest_Prefix.h;
 				INFOPLIST_FILE = "FindPanelTest/FindPanelTest-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2858,7 +2839,6 @@
 		4DC40C1409150C400029A2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -2868,7 +2848,6 @@
 				GCC_PREFIX_HEADER = FindPanelTest/OgreFindPanelTest_Prefix.h;
 				INFOPLIST_FILE = "FindPanelTest/FindPanelTest-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2887,7 +2866,6 @@
 		4DC40C1509150C400029A2A6 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2896,7 +2874,6 @@
 				GCC_PREFIX_HEADER = FindPanelTest/OgreFindPanelTest_Prefix.h;
 				INFOPLIST_FILE = "FindPanelTest/FindPanelTest-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2915,7 +2892,6 @@
 		4DC40C1E09150C740029A2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -2925,7 +2901,6 @@
 				GCC_PREFIX_HEADER = MyFindPanelExample/MyFindPanelExample_Prefix.h;
 				INFOPLIST_FILE = "MyFindPanelExample/MyFindPanelExample-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2944,7 +2919,6 @@
 		4DC40C1F09150C740029A2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -2954,7 +2928,6 @@
 				GCC_PREFIX_HEADER = MyFindPanelExample/MyFindPanelExample_Prefix.h;
 				INFOPLIST_FILE = "MyFindPanelExample/MyFindPanelExample-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2973,7 +2946,6 @@
 		4DC40C2009150C740029A2A6 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2982,7 +2954,6 @@
 				GCC_PREFIX_HEADER = MyFindPanelExample/MyFindPanelExample_Prefix.h;
 				INFOPLIST_FILE = "MyFindPanelExample/MyFindPanelExample-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -3001,7 +2972,6 @@
 		4DC40C3409150C9F0029A2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -3011,7 +2981,6 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "ReplaceWithAttributesTest/ReplaceWithAttributesTest-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -3034,7 +3003,6 @@
 		4DC40C3509150C9F0029A2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -3044,7 +3012,6 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "ReplaceWithAttributesTest/ReplaceWithAttributesTest-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -3067,7 +3034,6 @@
 		4DC40C3609150C9F0029A2A6 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -3076,7 +3042,6 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "ReplaceWithAttributesTest/ReplaceWithAttributesTest-Info.plist";
 				INSTALL_PATH = "$(USER_APPS_DIR)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -3099,7 +3064,6 @@
 		4DC412C3091519D50029A2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -3122,7 +3086,6 @@
 		4DC412C4091519D50029A2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -3145,7 +3108,6 @@
 		4DC412C5091519D50029A2A6 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
